@@ -9,6 +9,7 @@
     <!-- Bootstap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="Assets/CSS/style.css">
+    <link rel="thumbsupcounter" href="controllers/like.js">
     <title>Endorfins</title>
 </head>
 <body class="">
@@ -95,8 +96,10 @@
                     <h5 class="card-title">Group | <a href="#" class="post-link">Post Title</a></h5>
                     <p class="card-text">Post Content</p>
                     <div class="row">
-                        <a href="#" class="col btn btn-primary ml-3 mr-1">Like</a>
-                        <a href="#" class="col btn btn-primary ml-1 mr-3">Dislike</a>
+                        <a href="#" class='font-size:200px;'>&#128077;</a>
+                        <span id="likecount"></span>
+                        <a href="#" class='font-size:200px;'>&#128078;</a>
+                        <span id="dislikecount"></span>
                     </div>
 
                       <div class="input-group mb-3 mt-2">
