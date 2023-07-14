@@ -1,10 +1,16 @@
-var likeCount = document.querySelector('#likeCount');
-var dislikeCount = document.querySelector('#dislikeCount');
+var thumbsUpButton = document.getElementById('thumbsUpButton');
+var thumbsUpCount = document.getElementById('thumbsUpCount');
+var thumbsDownButton = document.getElementById('thumbsDownButton');
+var thumbsDownCount = document.getElementById('thumbsDownCount');
+var upCount = 0;
+var downCount = 0;
 
-function count(){
-  likeCount.value = parseInt(likeCount.value) + 1;
-}
+thumbsUpButton.addEventListener('click', function() {
+    upCount++;
+    thumbsUpCount.innerText = upCount;
+});
 
-function count1(){
-  dislikeCount.value = parseInt(dislikeCount.value) + 1;
-}
+thumbsDownButton.addEventListener('click', function() {
+    downCount++;
+    thumbsDownCount.innerText = downCount;
+});
