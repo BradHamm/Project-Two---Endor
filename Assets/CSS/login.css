@@ -63,7 +63,7 @@
 .card-body label {
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 120px;
     padding: 10px 0;
     font-size: 16px;
     color: #fff;
@@ -74,7 +74,7 @@
 .card-body input:focus ~ label,
 .card-body input:valid ~ label {
     top: -20px;
-    left: 0;
+    left: 120px;
     color: #f5ebeb;
     font-size: 12px;
 }
