@@ -1,25 +1,25 @@
-const User = require('../models/User'); // Assuming the User model file is in a separate directory
-const Post = require('../models/Post'); // Assuming the Post model file is in a separate directory
+const User = require('../models/User');
+const Post = require('../models/Post');
 
 async function renderHomepage(req, res) {
   try {
-    const currentUser = req.user; // Assuming you have user authentication implemented
+    const currentUser = req.user;
 
-    // Retrieve posts based on matching tag scores
+    // Retrieve posts matching the present tag scores of the user (Not by quantity but by match)
     const matchingPosts = await Post.findAll({
       where: {
-        tags: currentUser.tagScore // Assuming tags is a column in the Post model representing the tags of a post
+        tags: currentUser.tagScore 
       }
     });
 
-    // Retrieve activity feed posts of current friends
+
     const friendIds = currentUser.currentFriends; 
 
     const activityFeedPosts = await Post.findAll({
       where: {
         author_id: friendIds
       },
-      order: [['createdAt', 'DESC']] // sort by descending
+      order: [['createdAt', 'DESC']]
     });
 
     // Render the homepage
@@ -30,7 +30,6 @@ async function renderHomepage(req, res) {
     });
   } catch (error) {
     console.error('Error rendering homepage:', error);
-    // Handle and respond to the error accordingly
     res.status(500).send('Internal Server Error');
   }
 }
