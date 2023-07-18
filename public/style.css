@@ -1,0 +1,63 @@
+* {
+    font-family: "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.dark-blu { 
+	background: #070f4e; 
+}
+	
+.mid-blu { 
+	background: #2772db; 
+}
+
+.lite-blu { 
+	background: #3ab1c8; 
+}
+
+.not-blu { 
+	background: #f5ebeb; 
+}
+
+.nav-link {
+    color: white;
+}
+
+.search {
+    border: #3ab1c8;
+}
+
+.search:hover {
+    background: #2772db;
+}
+
+.post-link {
+    color: #070f4e;
+}
+
+/* title stuff */
+.title-body{
+    display: flex;
+    align-items: center;
+}
+.title-container{
+    position: relative;
+}
+
+.text_hide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #070f4e;
+}
+
+.text_cursor{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    border-left: 3px solid white;
+}
