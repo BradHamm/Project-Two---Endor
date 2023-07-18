@@ -1,3 +1,35 @@
-DROP DATABASE IF EXISTS forum_db;
+DROP TABLE IF EXISTS Users;
+DROP TABLE IF EXISTS Posts;
+DROP TABLE IF EXISTS Tags;
+DROP TABLE IF EXISTS FriendRequests;
 
-CREATE DATABASE forum_db;
+CREATE TABLE Users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(20) NOT NULL UNIQUE,
+  password VARCHAR(20) NOT NULL,
+  bio VARCHAR(5000) NOT NULL,
+  tagScore JSON
+);
+
+CREATE TABLE Posts (
+  id UUID PRIMARY KEY,
+  title VARCHAR(100) NOT NULL,
+  body VARCHAR(1000) NOT NULL,
+  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  author_id INT,
+  FOREIGN KEY (author_id) REFERENCES Users(id)
+);
+
+CREATE TABLE Tags (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  postHistory JSON,
+  tagName VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE FriendRequests (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  recipient_id INT,
+  sender_id INT,
+  FOREIGN KEY (recipient_id) REFERENCES Users(id),
+  FOREIGN KEY (sender_id) REFERENCES Users(id)
+);
