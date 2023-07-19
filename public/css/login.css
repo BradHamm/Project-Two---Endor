@@ -34,6 +34,35 @@
     color: #070f4e;
 }
 
+/* title stuff */
+.title-body{
+    display: flex;
+    align-items: center;
+}
+.title-container{
+    position: relative;
+}
+
+.text_hide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #070f4e;
+}
+
+.text_cursor{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    border-left: 3px solid white;
+}
+
+/* Login background */
 .card{
     position: absolute;
     right: 40%;

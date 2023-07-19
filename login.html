@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <!-- Bootstap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="public/css/login.css">
     <title>Login</title>
 </head>
 <body class="">
+    <!-- nav title bar with search -->
     <nav class="navbar sticky-top navbar-light dark-blu justify-content-center">
-        <a class="navbar-brand text-white">
-            <h1 class="title">Endorfins</h1>
+        <a class="navbar-brand text-white" href="index.html">
+            <div class="title-container">
+                <div class="text_hide"></div>
+                <h1 class="title text">Endorfins</h1>
+                <div class="text_cursor"></div>
+            </div>
         </a>
     </nav>
 
@@ -30,4 +38,8 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="public/login.js"></script>
+
+    <!-- title animation js -->
+    <script src="public/title-animation.js"></script>
 </body>
