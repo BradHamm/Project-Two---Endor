@@ -1,28 +1,28 @@
 const User = require('../models/User');
-const Post = require('../models/Post');
+const Posts = require('../models/Post');
+const { Op } = require('sequelize');
 
 async function renderHomepage(req, res) {
   try {
     const currentUser = req.user;
 
-    // Retrieve posts matching the present tag scores of the user (Not by quantity but by match)
-    const matchingPosts = await Post.findAll({
+    const matchingPosts = await Posts.findAll({
       where: {
-        tags: currentUser.tagScore 
+        tags: {
+          [Op.overlap]: currentUser.tagScore //retrieves any post with tags matching/overlapping with the tag score of the current user
+        }
       }
     });
 
-
     const friendIds = currentUser.currentFriends; 
 
-    const activityFeedPosts = await Post.findAll({
+    const activityFeedPosts = await Posts.findAll({
       where: {
         author_id: friendIds
       },
       order: [['createdAt', 'DESC']]
     });
 
-    // Render the homepage
     res.render('homepage', {
       currentUser,
       matchingPosts,

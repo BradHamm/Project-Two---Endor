@@ -4,7 +4,7 @@ const session = require('express-session');
 const exphbs = require('express-handlebars');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
-const routes = require('./controllers/api');
+const routes = require('./routes/routes');
 const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
@@ -32,7 +32,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(routes);
+app.use(require(routes));
+
+app.get('/', (req, res) => {
+  // Redirect to the homepage
+  res.redirect('/homepage');
+});
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
