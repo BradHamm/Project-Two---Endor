@@ -32,14 +32,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-//GET request to render the homepage information using the hompageController
+app.use(require(routes));
+
 app.get('/', (req, res) => {
-  homepageController(req, res);
+  // Redirect to the homepage
+  res.redirect('/homepage');
 });
-
-app.use(routes);
-
-
 
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));

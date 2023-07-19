@@ -3,13 +3,13 @@ const router = express.Router();
 
 const {
   friendPageController,
-  handleFriendRequest,
+  homepageController,
   profilePageController,
   searchPageController
-} = require('./controllers');
+} = require('../controllers');
 
 router.get('/friends', friendPageController);
-router.post('/friend-request', handleFriendRequest);
+router.get('/homepage', homepageController);
 router.get('/user/:userId', profilePageController);
 router.post('/search', searchPageController);
 
