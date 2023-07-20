@@ -1,21 +1,28 @@
+:root {
+    --dark-blu: #070f4e;
+    --mid-blu: #2772db;
+    --lite-blu: #3ab1c8;
+    --not-blu: #f5ebeb;
+}
+
 * {
     font-family: "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
 .dark-blu { 
-	background: #070f4e; 
+	background: var(--dark-blu); 
 }
 	
 .mid-blu { 
-	background: #2772db; 
+	background: var(--mid-blu); 
 }
 
 .lite-blu { 
-	background: #3ab1c8; 
+	background: var(--lite-blu); 
 }
 
 .not-blu { 
-	background: #f5ebeb; 
+	background: var(--not-blu); 
 }
 
 .nav-link {
@@ -23,15 +30,15 @@
 }
 
 .search {
-    border: #3ab1c8;
+    border: var(--lite-blu);
 }
 
 .search:hover {
-    background: #2772db;
+    background: var(--mid-blu);
 }
 
 .post-link {
-    color: #070f4e;
+    color: var(--dark-blu);
 }
 
 /* title stuff */
@@ -49,7 +56,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #070f4e;
+    background-color: var(--dark-blu);
 }
 
 .text_cursor{
@@ -62,3 +69,7 @@
     border-left: 3px solid white;
 }
 
+.friends-title {
+    margin: auto;
+    padding: auto;
+}
