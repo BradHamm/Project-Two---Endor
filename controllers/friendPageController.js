@@ -1,14 +1,14 @@
-const User = require('../models/User'); 
-const FriendRequests = require('../models/FriendRequests');
+const { Op } = require('sequelize');
+const { User, FriendRequests } = require('../models'); 
 
 async function renderFriendsPage(req, res) {
   try {
     const currentUser = req.user;
 
     const currentFriends = await User.findAll({
-      where: {
-        id: currentUser.currentFriends
-      }
+      // where: {
+      //   id: {[Op.in]: currentUser.currentFriends}
+      // }
     });
 
     // Retrieve pending FR's
@@ -28,7 +28,7 @@ async function renderFriendsPage(req, res) {
   } catch (error) {
     console.error('Error rendering friends page:', error);
     // Handle and respond to the error accordingly
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Server Error');
   }
 }
 

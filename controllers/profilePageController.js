@@ -1,5 +1,4 @@
-const User = require('../models/User');
-const Post = require('../models/Posts'); 
+const { User, Posts } = require('../models');
 
 async function renderUserProfile(req, res) {
   try {
@@ -11,7 +10,7 @@ async function renderUserProfile(req, res) {
     }
 
     // Retrieve all posts made by the user
-    const userPosts = await Post.findAll({
+    const userPosts = await Posts.findAll({
       where: {
         author_id: userId 
       },
@@ -25,7 +24,7 @@ async function renderUserProfile(req, res) {
     });
   } catch (error) {
     console.error('Error rendering user profile:', error);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Server Error');
   }
 }
 

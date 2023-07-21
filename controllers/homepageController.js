@@ -1,9 +1,8 @@
-const User = require('../models/User');
-const Posts = require('../models/Post');
+const { User, Posts } = require('../models');
 const { Op } = require('sequelize');
 
 async function renderHomepage(req, res) {
-  try {
+try {
     const currentUser = req.user;
 
     const matchingPosts = await Posts.findAll({
@@ -27,10 +26,11 @@ async function renderHomepage(req, res) {
       currentUser,
       matchingPosts,
       activityFeedPosts
-    });
+    }); 
+    
   } catch (error) {
     console.error('Error rendering homepage:', error);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Server Error');
   }
 }
 

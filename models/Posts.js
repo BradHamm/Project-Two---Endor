@@ -1,9 +1,9 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('./sequelize');
-const User = require('./User');
-const Tags = require('./Tags');
+const { DataTypes, Model } = require('sequelize');
+const sequelize = require('../config/connection');
 
-const Posts = sequelize.define('Posts', {
+
+class Posts extends Model {} 
+Posts.init({
   id: {
     type: DataTypes.UUID,
     defaultValue: DataTypes.UUIDV4,
@@ -17,11 +17,11 @@ const Posts = sequelize.define('Posts', {
     type: DataTypes.STRING(1000),
     allowNull: false
   },
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW
-  }
 }, {
+  sequelize,
+  modelName: 'posts',
+  tableName: 'posts',
+  timestamps: false,
   getterMethods: { //getterMethods define custom behavior when accessing the properties of objects. Use post.TagName for the {{#each}} statement in .hbs for appending tag information to cards.
     tagNames() {
       if (this.Tags) {
@@ -31,9 +31,5 @@ const Posts = sequelize.define('Posts', {
     }
   }
 });
-
-Posts.belongsTo(User, { foreignKey: 'author_id' });
-Posts.belongsToMany(Tags, { through: 'PostTags', foreignKey: 'post_id' });
-Tags.belongsToMany(Posts, { through: 'PostTags', foreignKey: 'tag_id' });
 
 module.exports = Posts;

@@ -1,7 +1,8 @@
-const { DataTypes } = require('sequelize');
-const sequelize = require('./sequelize');
+const { DataTypes, Model } = require('sequelize');
+const sequelize = require('../config/connection');
 
-const Tags = sequelize.define('Tags', {
+class Tags extends Model {} 
+Tags.init({
   id: {
     type: DataTypes.INTEGER,
     autoIncrement: true,
@@ -14,7 +15,14 @@ const Tags = sequelize.define('Tags', {
   tagName: {
     type: DataTypes.STRING(100),
     allowNull: false
+  },
+  },
+  {
+    sequelize, 
+    modelName: 'tags', 
+    tableName: 'tags', 
+    timestamps: false, 
   }
-});
+);
 
 module.exports = Tags;

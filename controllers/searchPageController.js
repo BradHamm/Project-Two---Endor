@@ -1,6 +1,5 @@
 const { Op } = require('sequelize');
-const User = require('../models/User');
-const Post = require('../models/Post');
+const { User, Posts } = require('../models');
 
 async function processSearch(req, res) {
   try {
@@ -17,7 +16,7 @@ async function processSearch(req, res) {
         }
       });
     } else if (searchFilter === 'title') { //Serach by title of post
-      searchResults = await Post.findAll({
+      searchResults = await Posts.findAll({
         where: {
           title: {
             [Op.like]: `%${searchQuery}%`
@@ -25,7 +24,7 @@ async function processSearch(req, res) {
         }
       });
     } else if (searchFilter === 'tag') { //Search by tag 
-      searchResults = await Post.findAll({
+      searchResults = await Posts.findAll({
         where: {
           tags: searchQuery
         }
@@ -37,7 +36,7 @@ async function processSearch(req, res) {
     });
   } catch (error) {
     console.error('Error performing search:', error);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Server Error');
   }
 }
 
