@@ -73,3 +73,36 @@
     margin: auto;
     padding: auto;
 }
+
+/* add friends overlay */
+.close-popup {
+    display: none;
+}
+
+.open-popup {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.popup-stuff {
+    position: fixed;
+    width: 75%;
+    top: 35vh;
+    left: 12.5%;
+
+}
+
+.popup-close-button {
+    position: fixed;
+    top: 30vh;
+    right: 12.5%;
+}
