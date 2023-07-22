@@ -22,8 +22,9 @@ Deployed webpage:
 8. [Sources](#sources)
 
 # About
-Welcome to Endorphines!
-A forum website where you can interact and connect with other people that share similar interest. 
+Welcome to Endorfins!
+
+Have you ever had an exciting day, gone to a new restaurant, started a new fitness routine or even lounged in bed and wanted to talk about it? Well look no further Endorfins is the place for you. Endorfins is a blogpost forum that allows you to connect with other people that have similar interests as you. With our webpage you are able to add friends, create new blog posts, and even read others blog posts that share the same interests. Maybe you are just getting into a hobby. You can connect with others using easy our easy to navigate search bar. Its quick and easy, all you have to do is sign up. Even if you sign up you can still browse and see if you would like to stay longer. We hope you enjoy our webpage!
 
 # User Story
 * As a forum website user, I would like to interact with others that have the same interest as myself. 
