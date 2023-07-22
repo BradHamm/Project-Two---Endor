@@ -41,6 +41,8 @@
         </form>
     </nav>
 
+    
+
     <div class="row">
         <!-- welcome card -->
         <div class="flex-column col mt-2 mr-2 ml-2">
@@ -65,7 +67,7 @@
                               <a class="nav-link" href="#">Blocked</a>
                             </li>
                             <li class="nav-item">
-                              <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search" type="submit" href="#">Add Friend</button>
+                              <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search" type="submit" onclick="openPopup()">Add Friend</button>
                             </li>
                           </ul>
 
@@ -73,6 +75,7 @@
                 </div>
             </div>
 
+            <!-- Friends Search -->
             <div class="card mid-blu mt-2">
               <div class="card-body">
                 <form class="form-inline row mr-1 ml-1">
@@ -117,6 +120,60 @@
         </div>
     </div>      
 
+    
+
+      <div class="close-popup" id="popup">
+      
+        <div class="popup-stuff">
+          <!-- Friends Search -->
+          <div class="card mid-blu mt-2">
+            <div class="card-body">
+              <form class="form-inline row mr-1 ml-1">
+                <input class="form-control mr-sm-2 col" type="search" placeholder="Search Friends" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search" type="submit">Search</button>
+              </form>
+            </div>
+          </div>
+
+          <!-- friends list section -->
+              <div class="card mt-2 dark-blu">
+                  <div class="card-body">
+                    
+                    <!-- indiviual friend -->
+                    <div class="card not-blu">
+                      <div class="card-body">
+                        <div class="row">
+                          <!-- friends name -->
+                          <p class="col friends-title"><i class="fa-solid fa-user fa-2xl"></i> <a href="#" class="text-dark">itsa-me-dea</a></p>
+                          <!-- friends options -->
+                          <ul class="nav justify-content-end col">
+                            <li class="nav-item">
+                              <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search" type="submit" href="#"><b>+</b></button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+  
+              <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search popup-close-button" type="button" onclick="closePopup()">✖</button>
+
+        </div>
+      </div>
+
+    <script>
+      let popup = document.getElementById("popup");
+      function openPopup() {
+        popup.classList.remove("close-popup");
+        popup.classList.add("open-popup");
+      }
+
+      function closePopup() {
+        popup.classList.remove("open-popup");
+        popup.classList.add("close-popup");
+      }
+    </script>
 
     <!-- Bootstap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
