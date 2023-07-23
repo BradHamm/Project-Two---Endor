@@ -1,3 +1,3 @@
-DROP TABLE IF Exists: forum_db
+DROP DATABASE IF EXISTS forum_db;
 
-DROP TABLE IF Exists: forum_db;
+CREATE DATABASE forum_db;

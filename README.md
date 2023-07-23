@@ -17,9 +17,9 @@ Deployed webpage:
 4. [Contributing](#contributing)
 5. [Tests](#tests)
 6. [Images](#images)
-     1. [Walkthrough-Video](#video)
 7. [Authors](#authors)
 8. [Sources](#sources)
+
 
 # About
 Welcome to Endorfins!
@@ -34,18 +34,35 @@ Have you ever had an exciting day, gone to a new restaurant, started a new fitne
 * I would also like to be able to create new posts, view my old posts and search for new posts to read based off of specific tags.
 
 # Installation
+ npm i
 
+
+# Technologies
+      bcrypt
+      connect-session-sequelize
+      dotenv
+      express
+      express-handlebars
+      express-session
+      handlebars
+      mysql2
+      sequelize
 
 # License
 MIT
 
 # Contributing
+ Please contribute at https://github.com/BradHamm/Endorphins
 
 # Tests
+ npm run start
 
+ Heroku cli deployment testing
 # Images
+ 
+![Alt text](images/friendspage.png)
 
-# Walkthrough Video
+
 
 # Authors
 
