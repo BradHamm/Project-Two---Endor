@@ -1,5 +1,4 @@
-const User = require('../models/User');
-const Posts = require('../models/Post');
+const { User, Posts } = require('../models');
 const { Op } = require('sequelize');
 
 async function renderHomepage(req, res) {
@@ -13,24 +12,23 @@ async function renderHomepage(req, res) {
         }
       }
     });
-
     const friendIds = currentUser.currentFriends; 
-
     const activityFeedPosts = await Posts.findAll({
       where: {
         author_id: friendIds
       },
       order: [['createdAt', 'DESC']]
     });
-
     res.render('homepage', {
       currentUser,
       matchingPosts,
       activityFeedPosts
-    });
+
+    }); 
+
   } catch (error) {
     console.error('Error rendering homepage:', error);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send('Server Error');
   }
 }
 
