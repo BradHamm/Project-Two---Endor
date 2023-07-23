@@ -94,28 +94,21 @@
             </div>
 
         <!-- suggested posts card -->
-            <div class="card mt-2 not-blu">
-                <div class="card-body">
-                    <h5 class="card-title">Group | <a href="#" class="post-link">Post Title</a></h5>
-                    <p class="card-text">Post Content</p>
-                    <div class="row">
-                        <button id="thumbsUpButton" style="background-color: #3ab1c8;">
-                            <span id="thumbsUpCount"></span>
-                            <p style="color:blue"><b>Like</b></p>
-                            <script src="public/js/like.js"></script>
-                        <button id="thumbsDownButton" style="background-color: #3ab1c8;">
-                            <span id="thumbsDownCount"></span>
-                            <p style="color:blue;"><b>DisLike</b></p>
-                            <script src="public/js/like.js">
-                            </script>
-                        </button>
+           
+<div class="card mt-2 not-blu">
+    <div class="card-body">
+        <input type="text" class="form-control mb-2" id="postTitle" placeholder="Enter Post Title">
+        <textarea class="form-control mb-2" id="postContent" placeholder="Add Post Content"></textarea>
+        <button class="btn btn-outline-secondary bg-primary text-white" id="savePostButton">Save Post</button>
+        <div class="mt-3">
+            <h5 id="savedPostTitle"></h5>
+            <p id="savedPostContent"></p>
+        </div>
+    </div>
+</div>
 
-                    </div>
 
-                      <div class="input-group mb-3 mt-2">
-                        <textarea class="form-control" placeholder="Add Comment" aria-label="Comment" aria-describedby="basic-addon2"></textarea>
-                        <div class="input-group-append">
-                          <button class="btn btn-outline-secondary bg-primary text-white" type="button">Submit</button>
+                  
                         </div>
                       </div>
                 </div>
@@ -131,5 +124,6 @@
     
     <!-- title animation js -->
     <script src="public/js/title-animation.js"></script>
+    <script src="public/js/posts.js"></script>
 </body>
 </html>
