@@ -8,13 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <!-- Bootstap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Our CSS -->
     <link rel="stylesheet" href="public/css/login.css">
+    <link rel="stylesheet" href="public/css/style.css">
+    <!-- Font Awesome js -->
+    <script src="https://kit.fontawesome.com/a23205ab6e.js" crossorigin="anonymous"></script>
+    <!-- title -->
     <title>Login</title>
 </head>
 <body class="">
     <!-- nav title bar with search -->
-    <nav class="navbar sticky-top navbar-light dark-blu justify-content-center">
-        <img src="/Endorfins.png" alt="Endorfins logo" width="50px" height="50px">
+    <nav class="row navbar sticky-top navbar-light dark-blu justify-content-center">
+        <img class="mr-2 mb-2" src="/Endorfins.png" alt="Endorfins logo" width="50px" height="50px">
         <a class="navbar-brand text-white" href="index.html">
             <div class="title-container">
                 <div class="text_hide"></div>
@@ -24,19 +29,85 @@
         </a>
     </nav>
 
-    <div class="card mt-3 not-blu">
+     <!-- SIGN IN -->
+     <div class="card not-blu sign-in">
         <div class="card-body">
+            <div class="card-body login-card-body">
                 <input type="text" name="" required="">
                 <label>Username</label>
         </div>
-        <div class="card-body">
+        <div class="card-body login-card-body">
                 <input type="password" name="" required="">
                 <label>Password</label>
         </div> 
-        <div class="row">
-        <a href="#" class="col btn btn-primary ml-1 mr-3">New User</a>
-        <a href="#" class="col btn btn-primary ml-1 mr-3">Login</a>
-    </div>
+        <div class="row justify-content-center">
+        <!-- <a href="#" class="col btn btn-primary ml-1 mr-3">New User</a>
+        <a href="#" class="col btn btn-primary ml-1 mr-3">Login</a> -->
+            <button class="col btn btn-outline-success my-2 my-sm-0 mid-blu text-white search ml-5" type="submit" onclick="openPopup()">New User</button>
+            <button class="col btn btn-outline-success my-2 my-sm-0 mid-blu text-white search ml-4 mr-5" type="submit" onclick="">Login</button>
+        </div>
+      </div>
+
+    
+
+    <!-- ADD NEW USER POPUP -->
+    <div class="close-popup" id="popup">
+      
+        
+        <div class="login-popup-stuff">
+            <!-- CLOSE BUTTON -->
+            <div class="button-container">
+                <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search login-popup-close-button" type="button" onclick="closePopup()">✖</button>
+            </div>
+          <!-- title -->
+          <div class="card mid-blu mt-2">
+            <div class="card-body">
+                <h5 class="col create-title">Create New User</h5>
+            </div>
+          </div>
+
+          <!-- create new user main section -->
+              <div class="card mt-2 dark-blu">
+                  <div class="card-body">
+                    
+                    <!-- forms for sign up -->
+                    <div class="card not-blu">
+                      <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                         </div>
+                         <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                         </div>
+                         <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Password" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                         </div>
+                        <div class="row justify-content-center">
+                          <!-- sign up buttons -->
+                              <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search col-4" type="submit" href="#">Create</button>
+                              <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search col-4 ml-4" type="submit" href="#">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+  
+              
+        </div>
+      </div>
+
+    <script>
+      let popup = document.getElementById("popup");
+      function openPopup() {
+        popup.classList.remove("close-popup");
+        popup.classList.add("open-popup");
+      }
+
+      function closePopup() {
+        popup.classList.remove("open-popup");
+        popup.classList.add("close-popup");
+      }
+    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="public/login.js"></script>
