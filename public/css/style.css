@@ -1,0 +1,108 @@
+:root {
+    --dark-blu: #070f4e;
+    --mid-blu: #2772db;
+    --lite-blu: #3ab1c8;
+    --not-blu: #f5ebeb;
+}
+
+* {
+    font-family: "Roboto Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.dark-blu { 
+	background: var(--dark-blu); 
+}
+	
+.mid-blu { 
+	background: var(--mid-blu); 
+}
+
+.lite-blu { 
+	background: var(--lite-blu); 
+}
+
+.not-blu { 
+	background: var(--not-blu); 
+}
+
+.nav-link {
+    color: white;
+}
+
+.search {
+    border: var(--lite-blu);
+}
+
+.search:hover {
+    background: var(--mid-blu);
+}
+
+.post-link {
+    color: var(--dark-blu);
+}
+
+/* title stuff */
+.title-body{
+    display: flex;
+    align-items: center;
+}
+.title-container{
+    position: relative;
+}
+
+.text_hide{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--dark-blu);
+}
+
+.text_cursor{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    border-left: 3px solid white;
+}
+
+.friends-title {
+    margin: auto;
+    padding: auto;
+}
+
+/* add friends overlay */
+.close-popup {
+    display: none;
+}
+
+.open-popup {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.popup-stuff {
+    position: fixed;
+    width: 75%;
+    top: 35vh;
+    left: 12.5%;
+
+}
+
+.popup-close-button {
+    position: fixed;
+    top: 30vh;
+    right: 12.5%;
+}

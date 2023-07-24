@@ -1,0 +1,89 @@
+:root {
+    --dark-blu: #070f4e;
+    --mid-blu: #2772db;
+    --lite-blu: #3ab1c8;
+    --not-blu: #f5ebeb;
+}
+
+/* Login background */
+.login-card{
+    position: absolute;
+    right: 30%;
+    bottom: 40%;
+    box-sizing: border-box;
+    padding: 40px;
+    width: 400px;
+}
+
+.login-card-body {
+    position: relative;
+}
+
+
+.login-card-body input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: var(--lite-blu);
+    cursor: pointer;
+}
+
+.login-card-body label {
+    position: absolute;
+    top: 20px;
+    left: 140px;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.login-card-body input:focus ~ label,
+.login-card-body input:valid ~ label {
+    top: -20px;
+    left: 120px;
+    color: #f5ebeb;
+    font-size: 12px;
+}
+
+.create-title {
+    margin: auto;
+    padding: auto;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sign-in {
+    display: block;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+}
+
+.login-popup-stuff:not(.button-container) {
+    /* position: fixed; */
+    display: block;
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+}
+
+.button-container {
+    position: relative; 
+    width: 500px;
+}
+
+.login-popup-close-button {
+    position: absolute; 
+    right: 0; 
+    bottom: 10px;
+}
