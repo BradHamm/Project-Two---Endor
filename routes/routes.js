@@ -6,7 +6,8 @@ const {
   friendPageController,
   homePageController,
   profilePageController,
-  searchPageController
+  searchPageController,
+  loginPageController,
 } = require('../controllers');
 
 router.get('/friends', withAuth, (req, res) => {
@@ -23,6 +24,14 @@ router.get('/user/:userId', (req, res) => {
 
 router.post('/search', withAuth, (req,res) => {
   searchPageController.handleSearch(req,res); //render searchpage after search
+})
+
+router.get('/login', (req,res) => {
+  loginPageController.renderLoginPage(req,res);
+})
+
+router.post('/login', (req,res) => {
+  loginPageController.handleLoginForm(req,res); //creates new user from login form submission
 })
 
 module.exports = router;
