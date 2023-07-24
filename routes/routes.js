@@ -30,7 +30,7 @@ router.get('/login', (req,res) => {
   loginPageController.renderLoginPage(req,res);
 })
 
-router.post('/login', (req,res) => {
+router.post('/create-user', (req,res) => {
   loginPageController.handleLoginForm(req,res); //creates new user from login form submission
 })
 
