@@ -3,27 +3,27 @@ const { User, FriendsList } = require('../models');
 
 async function renderFriendsPage(req, res) {
   try {
-    const currentUser = req.user;
+    // const currentUser = req.user;
 
-    const currentFriends = await User.findAll({
-      where: {
-        id: {[Op.in]: currentUser.currentFriends}
-      }
-    });
+    // const currentFriends = await User.findAll({
+    //   where: {
+    //     id: {[Op.in]: currentUser.currentFriends}
+    //   }
+    // });
 
-    // Retrieve pending FR's
-    const pendingRequests = await FriendsList.findAll({
-      where: {
-        recipient_id: currentUser.id 
-      },
-      include: [{ model: User, as: 'sender' }]
-    });
+    // // Retrieve pending FR's
+    // const pendingRequests = await FriendsList.findAll({
+    //   where: {
+    //     recipient_id: currentUser.id 
+    //   },
+    //   include: [{ model: User, as: 'sender' }]
+    // });
 
     // Render the friends page
     res.render('friends', {
-      currentUser,
-      currentFriends,
-      pendingRequests
+      // currentUser,
+      // currentFriends,
+      // pendingRequests
     });
   } catch (error) {
     console.error('Error rendering friends page:', error);
