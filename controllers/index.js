@@ -1,6 +1,9 @@
-const friendPageController = require("./friendPageController")
-const homePageController = require("./homePageController")
-const profilePageController = require("./profilePageController")
-const searchPageController = require("./searchPageController")
+const router = require('express').Router();
 
-module.exports = { friendPageController, homePageController, profilePageController, searchPageController}
+const apiRoutes = require('./api');
+const homeRoutes = require('./homeRoutes');
+
+router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
+
+module.exports = router;
