@@ -27,10 +27,10 @@ User.init({
     type: DataTypes.JSON,
     defaultValue: {}
   },
-  currentFriends: {
-    type: DataTypes.ARRAY(DataTypes.INTEGER),
-    defaultValue: []
-  }
+  // currentFriends: {
+  //   type: DataTypes.ARRAY(DataTypes.INTEGER),
+  //   defaultValue: []
+  // }
 },
 {
   sequelize, 

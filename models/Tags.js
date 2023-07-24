@@ -9,7 +9,7 @@ Tags.init({
     primaryKey: true
   },
   postHistory: {
-    type: DataTypes.ARRAY(DataTypes.INTEGER),
+    type: DataTypes.JSON,
     defaultValue: []
   },
   tagName: {

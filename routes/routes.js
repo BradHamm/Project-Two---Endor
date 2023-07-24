@@ -8,9 +8,20 @@ const {
   searchPageController
 } = require('../controllers');
 
-// router.get('/friends', friendPageController.renderFriendsPage); //render friends page
-// router.get('/homepage', homePageController.renderHomepage); //render homepage
-// router.get('/user/:userId', profilePageController.renderProfilePage); //render profile page
-// router.post('/search', searchPageController.handleSearch); //render searchpage after search
+router.get('/friends', (req, res) => {
+  friendPageController.renderFriendsPage(req,res);
+});
+
+router.get('/homepage', (req, res) => {
+  homePageController.renderHomepage(req,res); //render homepage
+});
+
+router.get('/user/:userId', (req, res) => {
+  profilePageController.renderProfilePage(req,res);
+})
+
+router.post('/search', (req,res) => {
+  searchPageController.handleSearch(req,res); //render searchpage after search
+})
 
 module.exports = router;

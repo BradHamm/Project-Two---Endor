@@ -32,7 +32,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use(require(routes));
+app.use(routes);
 
 app.get('/', (req, res) => {
   // Redirect to the homepage
