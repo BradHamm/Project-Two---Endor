@@ -13,7 +13,7 @@ router.get('/friends', (req, res) => {
 });
 
 router.get('/homepage', (req, res) => {
-  homePageController.renderHomepage(req,res); //render homepage
+  homePageController.renderHomepage(req,res);
 });
 
 router.get('/user/:userId', (req, res) => {
