@@ -1,18 +1,18 @@
 const { Op } = require('sequelize');
-const { User, FriendRequests } = require('../models'); 
+const { User, FriendsList } = require('../models'); 
 
 async function renderFriendsPage(req, res) {
   try {
     const currentUser = req.user;
 
     const currentFriends = await User.findAll({
-      // where: {
-      //   id: {[Op.in]: currentUser.currentFriends}
-      // }
+      where: {
+        id: {[Op.in]: currentUser.currentFriends}
+      }
     });
 
     // Retrieve pending FR's
-    const pendingRequests = await FriendRequests.findAll({
+    const pendingRequests = await FriendsList.findAll({
       where: {
         recipient_id: currentUser.id 
       },

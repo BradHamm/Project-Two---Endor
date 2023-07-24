@@ -23,14 +23,14 @@ User.init({
     type: DataTypes.STRING(5000),
     allowNull: false
   },
-  // tagScore: {
-  //   type: DataTypes.JSON,
-  //   defaultValue: {}
-  // },
-  // currentFriends: {
-  //   type: DataTypes.ARRAY(DataTypes.INTEGER),
-  //   defaultValue: []
-  // }
+  tagScore: {
+    type: DataTypes.JSON,
+    defaultValue: {}
+  },
+  currentFriends: {
+    type: DataTypes.JSON,
+    defaultValue: {}
+  }
 },
 {
   sequelize, 
