@@ -1,0 +1,107 @@
+<!-- SIGN IN -->
+<div class="card not-blu sign-in">
+  <div class="card-body">
+      <div class="card-body login-card-body">
+          <input type="text" name="" required="">
+          <label>Username</label>
+  </div>
+  <div class="card-body login-card-body">
+          <input type="password" name="" required="">
+          <label>Password</label>
+  </div> 
+  <div class="row justify-content-center">
+  <!-- <a href="#" class="col btn btn-primary ml-1 mr-3">New User</a>
+  <a href="#" class="col btn btn-primary ml-1 mr-3">Login</a> -->
+      <button class="col btn btn-outline-success my-2 my-sm-0 mid-blu text-white search ml-5" type="submit" onclick="openPopup()">New User</button>
+      <button class="col btn btn-outline-success my-2 my-sm-0 mid-blu text-white search ml-4 mr-5" type="submit" onclick="">Login</button>
+  </div>
+</div>
+
+<!-- ADD NEW USER POPUP -->
+    <div class="close-popup" id="popup">
+      
+        
+        <div class="login-popup-stuff">
+            <!-- CLOSE BUTTON -->
+            <div class="button-container">
+                <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search login-popup-close-button" type="button" onclick="closePopup()">✖</button>
+            </div>
+          <!-- title -->
+          <div class="card mid-blu mt-2">
+            <div class="card-body">
+                <h5 class="col create-title">Create New User</h5>
+            </div>
+          </div>
+
+          <!-- create new user main section -->
+              <div class="card mt-2 dark-blu">
+                  <div class="card-body">
+                    
+                    <!-- forms for sign up -->
+                    <div class="card not-blu">
+                      <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Username" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                         </div>
+                         <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Email" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                         </div>
+                         <div class="input-group mb-3">
+                            <input type="password" class="form-control" placeholder="Password" aria-label="Example text with button addon" aria-describedby="button-addon1">
+                         </div>
+                        <div class="row justify-content-center">
+                          <!-- sign up buttons -->
+                              <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search col-4" type="submit" href="#">Create</button>
+                              <button class="btn btn-outline-success my-2 my-sm-0 lite-blu text-white search col-4 ml-4" type="submit" onclick="closePopup()">Cancel</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+  
+              
+        </div>
+      </div>
+
+{{!-- <div class="row">
+  <div class="col-md-6">
+    <h2>Login</h2>
+
+    <form class="form login-form">
+      <div class="form-group">
+        <label for="email-login">email:</label>
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      <div class="form-group">
+        <label for="password-login">password:</label>
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">login</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-6">
+    <h2>Signup</h2>
+
+    <form class="form signup-form">
+      <div class="form-group">
+        <label for="name-signup">name:</label>
+        <input class="form-input" type="text" id="name-signup" />
+      </div>
+      <div class="form-group">
+        <label for="email-signup">email:</label>
+        <input class="form-input" type="text" id="email-signup" />
+      </div>
+      <div class="form-group">
+        <label for="password-signup">password:</label>
+        <input class="form-input" type="password" id="password-signup" />
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary" type="submit">signup</button>
+      </div>
+    </form>
+  </div>
+</div> --}}
+
+<script src="./js/login.js"></script>
