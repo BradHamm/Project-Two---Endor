@@ -33,7 +33,7 @@ Or you can download or fork this package. From there, open the integrated termin
 8. Open http://localhost:3001/
 
 ## Usage
-Heroku Deployed App: https://sleepy-garden-87469-1e9290099ada.herokuapp.com/.
+Heroku Deployed App: https://endorphins-9111dfdb45b8.herokuapp.com/.
 
 ![Alt text](/public/images/screen-capture-endorfins.gif)
 
