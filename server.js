@@ -41,7 +41,9 @@ app.use(routes);
 
 app.get('/', (req, res) => {
   // Redirect to the homepage
-  res.redirect('/homepage');
+  // res.redirect('/homepage');
+  res.send('Testing for send')
+  // res.render()
 });
 
 Sequelize.sync({ force: true }).then(() => { //toggle to false
