@@ -20,7 +20,7 @@ Have you ever had an exciting day, gone to a new restaurant, started a new fitne
 
 ## Installation
 
-Heroku Deployed App: https://sleepy-garden-87469-1e9290099ada.herokuapp.com/.
+Heroku Deployed App: https://endorphins-9111dfdb45b8.herokuapp.com/.
 
 Or you can download or fork this package. From there, open the integrated terminal (this is for VSCode) and run the following: 
 1. Open a terminal with `server.js`
