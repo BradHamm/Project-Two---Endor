@@ -22,7 +22,7 @@ Have you ever had an exciting day, gone to a new restaurant, started a new fitne
 
 ## Installation
 
-Deployed site (installation not needed): 
+Deployed site (installation not needed): https://endorfins-test-45d30ece2578.herokuapp.com/
 
 -OR-
 
